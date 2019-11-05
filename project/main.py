@@ -27,4 +27,4 @@ for i in range(cities):
 		a.append(float(distance))
 	distMat.append(a)    	
 print(distMat)
-geneticAlgorithm(population=cityList, popSize=200, eliteSize=10, mutationRate=0.045, generations=2000,distMatrix=distMat)
+geneticAlgorithm(population=cityList, popSize=100, eliteSize=12, mutationRate=0.015, generations=2000,distMatrix=distMat)
