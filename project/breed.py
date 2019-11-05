@@ -3,7 +3,7 @@ import random
 import operator
 import pandas as pd
 import matplotlib.pyplot as plt
-from project import *
+
 
 def breed(parent1, parent2):
     child = [],

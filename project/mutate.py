@@ -3,7 +3,7 @@ import random
 import operator
 import pandas as pd
 import matplotlib.pyplot as plt
-from project import *
+
 
 def mutate(individual, mutationRate):
     for swapped in range(len(individual)):
@@ -18,10 +18,12 @@ def mutate(individual, mutationRate):
     return individual
 
 
-def mutatePopulation(population, mutationRate):
+def mutatePopulation(population, mutationRate, eliteSize):
     mutatedPop = []
+    for ind in range(0,eliteSize):
+    	mutatedPop.append(population[ind])
     
-    for ind in range(0, len(population)):
+    for ind in range(eliteSize, len(population)):
         mutatedInd = mutate(population[ind], mutationRate)
         mutatedPop.append(mutatedInd)
     return mutatedPop

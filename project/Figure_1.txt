@@ -1,0 +1,1 @@
+population=cityList, popSize=100, eliteSize=20, mutationRate=0.024, generations=2000,distMatrix=distMat
