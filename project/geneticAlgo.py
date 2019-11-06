@@ -20,10 +20,11 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations,d
 		progress.append(1 / rankRoutes(pop,distMatrix)[0][1])
 	print("Final distance: " + str(1 / rankRoutes(pop,distMatrix)[0][1]))
 	bestRouteIndex = rankRoutes(pop,distMatrix)[0][0]
+	bestRouteDistance = 1 / rankRoutes(pop,distMatrix)[0][1]
 	bestRoute = pop[bestRouteIndex]
-	bestRoute
+	#bestRoute
 	plt.plot(progress)
 	plt.ylabel('Distance')
 	plt.xlabel('Generation')
 	plt.show()
-	return bestRoute
+	return bestRouteDistance
