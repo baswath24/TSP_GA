@@ -2,6 +2,7 @@ import numpy as np
 import random
 import operator
 import pandas as pd
+import time
 import matplotlib.pyplot as plt
 from geneticAlgo import *
 
@@ -27,4 +28,7 @@ for i in range(cities):
 		a.append(float(distance))
 	distMat.append(a)    	
 print(distMat)
-geneticAlgorithm(population=cityList, popSize=100, eliteSize=12, mutationRate=0.015, generations=2000,distMatrix=distMat)
+start_time=time.time()
+geneticAlgorithm(population=cityList, popSize=100, eliteSize=12, mutationRate=0.005, generations=2000,distMatrix=distMat)
+elapsed_time=time.time()-start_time
+print("elapsed_time: ",elapsed_time)
