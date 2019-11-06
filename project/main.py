@@ -13,6 +13,7 @@ for i in range(0,cities):
 	cityList.append(i)
 distMat = []
 print("distance array: ")
+
 # distMat = [[0]*cities for _ in range(cities)]
 # for i in range(cities):
 #     distMat[i] = [int(j) for j in input().strip().split(" ")]	
@@ -28,7 +29,15 @@ for i in range(cities):
 		a.append(float(distance))
 	distMat.append(a)    	
 print(distMat)
+print("population size: ")
+popSize=int(input())
+print("elite size: ")
+eliteSize=int(input())
+print("mutation Rate: ")
+mutationRate=float(input())
+print("generations: ")
+generations=int(input())
 start_time=time.time()
-geneticAlgorithm(population=cityList, popSize=100, eliteSize=12, mutationRate=0.005, generations=2000,distMatrix=distMat)
+geneticAlgorithm(population=cityList, popSize=popSize, eliteSize=eliteSize, mutationRate=mutationRate, generations=generations,distMatrix=distMat)
 elapsed_time=time.time()-start_time
 print("elapsed_time: ",elapsed_time)
