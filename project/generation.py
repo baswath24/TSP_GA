@@ -8,10 +8,10 @@ from selection import *
 from mutate import *
 from breed import *
 
-def nextGeneration(currentGen, eliteSize, mutationRate, distMatrix):
+def nextGeneration(currentGen, eliteSize, mutationRate, distMatrix, popSize):
 	popRanked = rankRoutes(currentGen,distMatrix)
 	selectionResults = selection(popRanked, eliteSize)
-	matingpool = matingPool(currentGen, selectionResults)
+	matingpool = matingPool(currentGen, selectionResults[:popSize])
 	children = breedPopulation(matingpool, eliteSize)
 	nextGeneration = mutatePopulation(children, mutationRate, eliteSize)
 	return nextGeneration
