@@ -15,7 +15,7 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations,d
 
 
 	for i in range(0, generations):
-		pop = nextGeneration(pop, eliteSize, mutationRate,distMatrix)
+		pop = nextGeneration(pop, eliteSize, mutationRate,distMatrix, popSize)
 		print(i)
 		progress.append(1 / rankRoutes(pop,distMatrix)[0][1])
 	print("Final distance: " + str(1 / rankRoutes(pop,distMatrix)[0][1]))
