@@ -6,8 +6,10 @@ import matplotlib.pyplot as plt
 from create_pop import *
 from fitness import *
 from generation import *
+import time
 
 def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations,distMatrix):
+	start_time=time.time()
 	pop = initialPopulation(popSize, population)
 	print("Initial distance: " + str(1 / rankRoutes(pop,distMatrix)[0][1]))
 	progress = []
@@ -22,9 +24,11 @@ def geneticAlgorithm(population, popSize, eliteSize, mutationRate, generations,d
 	bestRouteIndex = rankRoutes(pop,distMatrix)[0][0]
 	bestRouteDistance = 1 / rankRoutes(pop,distMatrix)[0][1]
 	bestRoute = pop[bestRouteIndex]
+	elapsed_time=time.time()-start_time
+	print("elapsed_time: ",elapsed_time)
 	#bestRoute
 	plt.plot(progress)
 	plt.ylabel('Distance')
 	plt.xlabel('Generation')
 	plt.show()
-	return bestRouteDistance
+	return str(1 / rankRoutes(pop,distMatrix)[0][1])
