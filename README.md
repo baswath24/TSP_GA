@@ -1,5 +1,5 @@
 # TSP_GA
-Solution for travelling salesman problem using gentic algorithm. This algorithm uses ordered crossover opearator and mutual swap mutation.
+This is a genetic algorithm for travelling salesman problem. The algo is divided into various modules one for each operation for e.g., cross-over,mutation,selection. So, one can change various operators independently and study their behaviour. This algo helps people to study behaviour of genetic algorithm on travelling salesman problem for varied parameters. One can vary parameters through UI and progress of solution through generations is shown through a graph.
 
 ## Packages Installation
 Install packages required for the program by running the following commands
@@ -11,10 +11,11 @@ pip install pandas
 pip install matplotlib
 ```
 ## Usage
-Enter respective values of fields shown in UI and click Calculate
-City Co-ordinates are to be entered as one city co-ordinates in each line
-prints final distance and elapsed time in shell and graph showing progress for each generation will be popped
-close graph to continue calculate for new set of values
+Ensure that python3 is installed.
+Clone the repository locally.
+Move to the root directory and run: python3 population.py
 
 ## Upgrading
 One can fork this repository and can change operators in respective python modules for executing different operators.
+
+
